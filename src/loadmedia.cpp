@@ -66,6 +66,7 @@ bool loadMedia()
     music[BUTTON_CLICK_MUSIC] = Mix_LoadMUS("../res/audio/back_button.mp3");
     music[BACKGROUND_MUSIC] = Mix_LoadMUS("../res/audio/background_music3.mp3");
     music[GAME_OVER_MUSIC] = Mix_LoadMUS("../res/audio/Game_over.mp3");
+    music[GAME_WIN_MUSIC] = Mix_LoadMUS("../res/audio/Game_win.mp3");
 
     for(int i = 0; i<TOTAL_MUSIC; i++)
     {

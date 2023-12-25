@@ -473,6 +473,21 @@ here:
 
     // back button - end
 
+
+// shows turns left - start
+
+    SDL_Rect turns_left_rect;
+    SDL_Texture *turns_left_texture = loadTextureFromText(("Turns left: " + (to_string(turns_left))).c_str(), valorax_font, 12, turns_left_rect, {0, 0, 0});
+    turns_left_rect.x = 700;
+    turns_left_rect.y = 100;
+    turns_left_rect.w  = (double)turns_left_rect.w * 0.40;
+    turns_left_rect.h  = (double)turns_left_rect.h * 0.40;
+    SDL_RenderCopy(renderer, turns_left_texture, NULL, &turns_left_rect);
+    SDL_DestroyTexture(turns_left_texture);
+
+// shows turns left - end
+
+
     if (L2_cursor_inside) // shows cursor while inside
         SDL_RenderCopy(renderer, texture[CURSOR], NULL, &L2_cursor_rect);
 

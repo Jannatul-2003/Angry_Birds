@@ -11,7 +11,7 @@ void back_button_music_gameWon()
     Mix_Music *backgroundMusic = Mix_LoadMUS("../res/audio/back_button.mp3");
     Mix_PlayMusic(backgroundMusic, 0); // Start playing music once
     SDL_Delay(100);
-    // Mix_FreeMusic(backgroundMusic);
+    Mix_FreeMusic(backgroundMusic);
 }
 
 
@@ -27,7 +27,6 @@ void gameWon()
         if (gamewon_event.type == SDL_QUIT)
         {
             running = false;
-            
             return;
         }
         if(gamewon_event.type == SDL_MOUSEBUTTONDOWN && isHovered({X, Y}, backButton))
@@ -38,7 +37,6 @@ void gameWon()
             back_button_music_gameWon();
 
             Mix_HaltMusic();  // Stop music immediately
-
             return;
         }
     }
@@ -83,6 +81,7 @@ void gameWon()
     name_rect.x = 200;
     name_rect.y = 700;
     SDL_RenderCopy(renderer, name_texture, NULL, &name_rect);
+    SDL_DestroyTexture(name_texture);
 
     // back_button
 
