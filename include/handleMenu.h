@@ -1,10 +1,8 @@
-#ifndef HandleMenu
-#define HandleMenu
+#ifndef HANDLE_MENU
+#define HANDLE_MENU
 
 #include "header.h"
 
-void handleMenu();
+void handleMenu(SDL_Renderer *renderer, bool &quit, State &currentState);
 
 #endif
-
-
