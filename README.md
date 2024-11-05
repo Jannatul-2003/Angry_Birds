@@ -1,6 +1,6 @@
 # MainGame-Angry-Birds
 
-This is our project. We are trying to make "Angry birds" game.
+This is our first project. We are trying to replicate "Angry birds" game.
 
 Team members: 
 1. Jannatul Ferdousi 
